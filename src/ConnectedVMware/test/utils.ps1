@@ -29,10 +29,10 @@ function setupEnv() {
     $extendedLocationType = "CustomLocation"
     $env.Add("extendedLocationType", $extendedLocationType)
 
-    $extendedLocationName = "/subscriptions/$($env.SubscriptionId)/resourceGroups/azcli-test-rg/providers/Microsoft.ExtendedLocation/customLocations/azcli-test-cl3"
+    $extendedLocationName = "/subscriptions/$($env.SubscriptionId)/resourceGroups/azcli-test-rg/providers/Microsoft.ExtendedLocation/customLocations/azcli-test-cl"
     $env.Add("extendedLocationName", $extendedLocationName)
 
-    $vcenterId = "/subscriptions/$($env.SubscriptionId)/resourceGroups/azcli-test-rg/providers/microsoft.connectedvmwarevsphere/VCenters/azcli-test-vc3"
+    $vcenterId = "/subscriptions/$($env.SubscriptionId)/resourceGroups/azcli-test-rg/providers/microsoft.connectedvmwarevsphere/VCenters/azcli-test-vc"
     $env.Add("vcenterId", $vcenterId)
 
     $clusterName = "test-cluster" + (RandomString -allChars $false -len 5)
@@ -44,10 +44,10 @@ function setupEnv() {
     $hostName = "test-host" + (RandomString -allChars $false -len 5)
     $env.Add("hostName", $hostName)
 
-    $resourcePoolName = "test-resourcePool" + (RandomString -allChars $false -len 5)
+    $resourcePoolName = "test-rp" + (RandomString -allChars $false -len 5)
     $env.Add("resourcePoolName", $resourcePoolName)
 
-    $vcenterName = "azcli-test-vc3"
+    $vcenterName = "azcli-test-vc"
     $env.Add("vcenterName", $vcenterName)
 
     $vmName = "vm-1106469"

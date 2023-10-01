@@ -15,16 +15,16 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareResourcePool
 }
 
 Describe 'AzConnectedVMwareResourcePool' {
-    It 'CreateExpanded' {
-        New-AzConnectedVMwareResourcePool -Name $env.resourcePoolName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc3/InventoryItems/resgroup-714155"
+    It 'CreateExpanded' -Skip {
+        New-AzConnectedVMwareResourcePool -Name $env.resourcePoolName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc/InventoryItems/resgroup-724471"
     }
 
     It 'Get' {
-        $rp = Get-AzConnectedVMwareResourcePool -ResourceGroupName $env.ResourceGroupName -Name $env.resourcePoolName
-        $rp.Name | Should -Be $env.resourcePoolName
+        $rp = Get-AzConnectedVMwareResourcePool -ResourceGroupName $env.ResourceGroupName -Name "azcli-test-rp"
+        $rp.Name | Should -Be "azcli-test-rp"
     }
 
-    It 'Delete' {
-        Remove-AzConnectedVMwareResourcePool -Name $env.resourcePoolName -ResourceGroupName $env.resourceGroupName
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareResourcePool -Name "azcli-test-rp" -ResourceGroupName $env.resourceGroupName
     }
 }

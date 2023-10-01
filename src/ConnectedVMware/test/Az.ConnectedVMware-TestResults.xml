@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<test-results xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="nunit_schema_2.5.xsd" name="Pester" total="7" errors="0" failures="7" not-run="0" inconclusive="0" ignored="14" skipped="0" invalid="0" date="2023-10-01" time="09:30:16">
+  <environment cwd="C:\workspace\new-azure-powershell\src\ConnectedVMware" clr-version="Unknown" user="sanmishra" nunit-version="2.5.8.0" os-version="10.0.25951" machine-name="SANMISHRA-D2" user-domain="FAREAST" platform="Microsoft Windows 11 Enterprise Insider Preview|C:\WINDOWS|\Device\Harddisk1\Partition4" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="TestFixture" name="Pester" executed="True" result="Failure" success="False" time="3.3181" asserts="0" description="Pester">
+    <results>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareCluster.Tests.ps1" executed="True" result="Failure" success="False" time="0.8865" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareCluster.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareCluster" executed="True" result="Failure" success="False" time="0.454" asserts="0" description="AzConnectedVMwareCluster">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareCluster.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareCluster.Get" time="0.0442" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareCluster.Tests.ps1: line 23
+23:         $cluster = Get-AzConnectedVMwareCluster -ResourceGroupName $env.ResourceGroupName -Name "Cluster1"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareCluster.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareDatastore.Tests.ps1" executed="True" result="Failure" success="False" time="0.4073" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareDatastore.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareDatastore" executed="True" result="Failure" success="False" time="0.1076" asserts="0" description="AzConnectedVMwareDatastore">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareDatastore.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareDatastore.Get" time="0.0062" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareDatastore.Tests.ps1: line 23
+23:         $datastore = Get-AzConnectedVMwareDatastore -ResourceGroupName $env.ResourceGroupName -Name "datastore1"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareDatastore.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareHost.Tests.ps1" executed="True" result="Failure" success="False" time="0.4311" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareHost.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareHost" executed="True" result="Failure" success="False" time="0.1038" asserts="0" description="AzConnectedVMwareHost">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareHost.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareHost.Get" time="0.0107" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareHost.Tests.ps1: line 23
+23:         $hosts = Get-AzConnectedVMwareHost -ResourceGroupName $env.ResourceGroupName -Name "10-150-178-208"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareHost.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareResourcePool.Tests.ps1" executed="True" result="Failure" success="False" time="0.4093" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareResourcePool.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareResourcePool" executed="True" result="Failure" success="False" time="0.1298" asserts="0" description="AzConnectedVMwareResourcePool">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareResourcePool.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareResourcePool.Get" time="0.0109" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareResourcePool.Tests.ps1: line 23
+23:         $rp = Get-AzConnectedVMwareResourcePool -ResourceGroupName $env.ResourceGroupName -Name "azcli-test-rp"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareResourcePool.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVCenter.Tests.ps1" executed="True" result="Failure" success="False" time="0.4253" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVCenter.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareVCenter" executed="True" result="Failure" success="False" time="0.139" asserts="0" description="AzConnectedVMwareVCenter">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareVCenter.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareVCenter.Get" time="0.0204" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVCenter.Tests.ps1: line 22
+22:         $vc = Get-AzConnectedVMwareVCenter -ResourceGroupName $env.ResourceGroupName -Name $env.vcenterName
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareVCenter.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVMTemplate.Tests.ps1" executed="True" result="Failure" success="False" time="0.3797" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVMTemplate.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareVMTemplate" executed="True" result="Failure" success="False" time="0.118" asserts="0" description="AzConnectedVMwareVMTemplate">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareVMTemplate.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareVMTemplate.Get" time="0.0059" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVMTemplate.Tests.ps1: line 23
+23:         $vmtmpl = Get-AzConnectedVMwareVMTemplate -ResourceGroupName $env.ResourceGroupName -Name "azcli-test-linux-tmpl"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareVMTemplate.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVNet.Tests.ps1" executed="True" result="Failure" success="False" time="0.3788" asserts="0" description="C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVNet.Tests.ps1">
+        <results>
+          <test-suite type="TestFixture" name="AzConnectedVMwareVNet" executed="True" result="Failure" success="False" time="0.1119" asserts="0" description="AzConnectedVMwareVNet">
+            <results>
+              <test-case description="CreateExpanded" name="AzConnectedVMwareVNet.CreateExpanded" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+              <test-case description="Get" name="AzConnectedVMwareVNet.Get" time="0.01" asserts="0" success="False" result="Failure" executed="True">
+                <failure>
+                  <message>Cannot bind argument to parameter 'ResourceGroupName' because it is an empty string.</message>
+                  <stack-trace>at &lt;ScriptBlock&gt;, C:\workspace\new-azure-powershell\src\ConnectedVMware\test\AzConnectedVMwareVNet.Tests.ps1: line 23
+23:         $vnet = Get-AzConnectedVMwareVNet -ResourceGroupName $env.ResourceGroupName -Name "VM-Network"
+</stack-trace>
+                </failure>
+              </test-case>
+              <test-case description="Delete" name="AzConnectedVMwareVNet.Delete" time="0" asserts="0" success="True" result="Ignored" executed="False" />
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

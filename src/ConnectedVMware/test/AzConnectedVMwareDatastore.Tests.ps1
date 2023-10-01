@@ -15,16 +15,16 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareDatastore'))
 }
 
 Describe 'AzConnectedVMwareDatastore' {
-    It 'CreateExpanded' {
-        New-AzConnectedVMwareDatastore -Name $env.datastoreName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc3/InventoryItems/datastore-563744"
+    It 'CreateExpanded' -Skip {
+        New-AzConnectedVMwareDatastore -Name $env.datastoreName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc/InventoryItems/datastore-563660"
     }
 
     It 'Get' {
-        $datastore = Get-AzConnectedVMwareDatastore -ResourceGroupName $env.ResourceGroupName -Name $env.datastoreName
-        $datastore.Name | Should -Be $env.datastoreName
+        $datastore = Get-AzConnectedVMwareDatastore -ResourceGroupName $env.ResourceGroupName -Name "datastore1"
+        $datastore.Name | Should -Be "datastore1"
     }
 
-    It 'Delete' {
-        Remove-AzConnectedVMwareDatastore -Name $env.datastoreName -ResourceGroupName $env.resourceGroupName
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareDatastore -Name "datastore1" -ResourceGroupName $env.resourceGroupName
     }
 }

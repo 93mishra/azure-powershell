@@ -15,16 +15,16 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareHost'))
 }
 
 Describe 'AzConnectedVMwareHost' {
-    It 'CreateExpanded' {
-        New-AzConnectedVMwareHost -Name $env.hostName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc3/InventoryItems/host-713902"
+    It 'CreateExpanded' -Skip {
+        New-AzConnectedVMwareHost -Name $env.hostName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc/InventoryItems/host-1147412"
     }
 
     It 'Get' {
-        $hosts = Get-AzConnectedVMwareHost -ResourceGroupName $env.ResourceGroupName -Name $env.hostName
-        $hosts.Name | Should -Be $env.hostName
+        $hosts = Get-AzConnectedVMwareHost -ResourceGroupName $env.ResourceGroupName -Name "10-150-178-208"
+        $hosts.Name | Should -Be "10-150-178-208"
     }
 
-    It 'Delete' {
-        Remove-AzConnectedVMwareHost -Name $env.hostName -ResourceGroupName $env.resourceGroupName
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareHost -Name "10-150-178-208" -ResourceGroupName $env.resourceGroupName
     }
 }

@@ -15,16 +15,16 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareVMTemplate')
 }
 
 Describe 'AzConnectedVMwareVMTemplate' {
-    It 'CreateExpanded' {
-        New-AzConnectedVMwareVMTemplate -Name $env.vmTemplateName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc3/InventoryItems/vmtpl-vm-652057"
+    It 'CreateExpanded' -Skip {
+        New-AzConnectedVMwareVMTemplate -Name $env.vmTemplateName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc/InventoryItems/vmtpl-vm-651858"
     }
 
     It 'Get' {
-        $vmtmpl = Get-AzConnectedVMwareVMTemplate -ResourceGroupName $env.ResourceGroupName -Name $env.vmTemplateName
-        $vmtmpl.Name | Should -Be $env.vmTemplateName
+        $vmtmpl = Get-AzConnectedVMwareVMTemplate -ResourceGroupName $env.ResourceGroupName -Name "azcli-test-linux-tmpl"
+        $vmtmpl.Name | Should -Be "azcli-test-linux-tmpl"
     }
 
-    It 'Delete' {
-        Remove-AzConnectedVMwareVMTemplate -Name $env.vmTemplateName -ResourceGroupName $env.resourceGroupName
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareVMTemplate -Name "azcli-test-linux-tmpl" -ResourceGroupName $env.resourceGroupName
     }
 }

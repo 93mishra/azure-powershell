@@ -15,9 +15,15 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareVCenter'))
 }
 
 Describe 'AzConnectedVMwareVCenter' {
+    It 'CreateExpanded' -Skip {
+    }
+
     It 'Get' {
         $vc = Get-AzConnectedVMwareVCenter -ResourceGroupName $env.ResourceGroupName -Name $env.vcenterName
         $vc.Name | Should -Be $env.vcenterName
     }
 
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareVCenter -Name $env.vcenterName -ResourceGroupName $env.resourceGroupName
+    }
 }

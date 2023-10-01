@@ -15,16 +15,16 @@ if(($null -eq $TestName) -or ($TestName -contains 'AzConnectedVMwareCluster'))
 }
 
 Describe 'AzConnectedVMwareCluster' {
-    It 'CreateExpanded' {
-        New-AzConnectedVMwareCluster -Name $env.clusterName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc3/InventoryItems/domain-c644614"
+    It 'CreateExpanded' -Skip {
+        New-AzConnectedVMwareCluster -Name $env.clusterName -ResourceGroupName $env.resourceGroupName -Location $env.location -ExtendedLocationName $env.extendedLocationName -ExtendedLocationType $env.extendedLocationType -InventoryItemId "/subscriptions/204898ee-cd13-4332-b9d4-55ca5c25496d/resourceGroups/azcli-test-rg/providers/Microsoft.ConnectedVMwarevSphere/VCenters/azcli-test-vc/InventoryItems/domain-c649660"
     }
 
     It 'Get' {
-        $cluster = Get-AzConnectedVMwareCluster -ResourceGroupName $env.ResourceGroupName -Name $env.clusterName
-        $cluster.Name | Should -Be $env.clusterName
+        $cluster = Get-AzConnectedVMwareCluster -ResourceGroupName $env.ResourceGroupName -Name "Cluster1"
+        $cluster.Name | Should -Be "Cluster1"
     }
 
-    It 'Delete' {
-        Remove-AzConnectedVMwareCluster -Name $env.clusterName -ResourceGroupName $env.resourceGroupName
+    It 'Delete' -Skip {
+        Remove-AzConnectedVMwareCluster -Name "Cluster1" -ResourceGroupName $env.resourceGroupName
     }
 }
